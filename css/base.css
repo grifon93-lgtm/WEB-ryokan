@@ -1,0 +1,416 @@
+@charset "utf-8";
+
+body{
+//	font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic", "メイリオ", Meiryo, sans-serif;
+	font-family: "Yu Mincho", "游明朝", "Hiragino Mincho Pro", "Noto Serif JP", "Yu Mincho", serif;
+	background: #fffdf5;
+}
+img, video {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+
+/*header*/
+header {
+	width: 100%;
+	height: 100px;
+	background: #fff;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	position: fixed;
+	z-index: 1000;
+
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+
+.scrolled-header {
+	opacity: 0.3;
+}
+.scrolled-header:hover {
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+
+
+
+/*nav*/
+.navWrap {
+	width: 50%;
+	height: 100vh;
+	background: rgba(255, 255, 255, 0.9);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 900;
+	transform: translateX(-3000px);
+	transition: all 0.2s;
+}
+.navWrap .picture {
+	aspect-ratio: 1 / 1;
+	max-height: 80px;
+	padding: 8px 0 0 112px;
+	text-align: center;
+	line-height: 2;
+}
+.navWrap .picture p:hover {
+	color: #000;
+}
+
+.uNav {
+	width: 100%;
+	padding-top: 48px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction:column;
+
+}
+.uNav li {
+	margin-right: auto;
+	width: 100%;
+	height: 100%;
+	font-size: 1.5rem;
+	line-height: 2.4;
+	text-align: left;
+	border-top: 1px solid #CCC;
+	box-sizing: border-box;
+//	background: #516934;
+
+
+}
+.uNav li a {
+	padding: 0 24px;
+	color: #000;
+	display: block;
+}
+.uNav li:hover {
+	background: #bf9000ff;
+}
+.uNav li a:hover {
+	color: #fff;
+}
+
+.navWrap.open {
+	transform: translateX(0);
+}
+
+.logo {
+	width: 60%;
+	height: 100%;
+//	background: #ff0;
+}
+.logo p {
+	height: 100%;
+	display: block;
+	text-align: center;
+}
+.logo img {
+	height: 100%;
+}
+
+.yoyaku {
+//	aspect-ratio: 1 / 1;
+	width: 95px;
+	border: solid 1.5px #bf9000ff;
+	border-radius: 25px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	box-sizing: border-box;
+}
+.contact {
+//	aspect-ratio: 1 / 1;
+	width: 112px;
+	border: solid 1.5px #bf9000ff;
+	border-radius: 25px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	box-sizing: border-box;
+}
+.yoyaku p,
+.contact p {
+	width: 100%;
+	margin: 0 auto;
+	line-height: 3;
+	color: #bf9000ff;
+}
+.yoyaku a,
+.contact a {
+	display: block;
+	color: #bf9000ff;
+}
+.yoyaku:hover,
+.contact:hover {
+	background: #bf9000ff;
+}
+.yoyaku a:hover,
+.contact a:hover {
+	color: #fff;
+}
+
+
+/*trigger*/
+.triggerBg {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 10;
+	background-color: rgba(204, 204, 204, 0.4);
+	display: none;
+	top: 0;
+	left: 0;
+}
+
+.trigger {
+//	position: relative;
+//	top: 65px;
+//	right: 10px;
+//	z-index: 1001;
+	width: 42px;
+	height: 36px;
+	cursor: pointer;
+	z-index: 1200;
+}
+.trigger span {
+	display: inline-block;
+	width: 100%;
+	height: 4px;
+	background: #666;
+	transition: ease 0.3s;
+	box-sizing: border-box;
+}
+
+.trigger span:nth-of-type(1) {
+	top: 0;
+}
+.trigger span:nth-of-type(2) {
+	top: 20px;
+}
+.trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+
+.trigger.active span:nth-of-type(1) {
+	transform: translateY(16px) rotate(-45deg);
+}
+
+.trigger.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.trigger.active span:nth-of-type(3) {
+	transform: translateY(-16px) rotate(45deg);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 12px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  background-color: #b28e5d; /* 和風っぽい金茶系 */
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+
+
+/*footer*/
+footer {
+	height: 300px;
+	padding: 64px;
+	background: #516934;
+	color: #fff;
+	line-height: 1.5;
+}
+.footer-box {
+	margin-bottom: 72px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-size: 1.2rem;
+
+}
+footer .ryokan-box{
+	width: 40%;	
+}
+footer .ryokan-box .picture {
+	height: 88px;
+	box-sizing: border-box;
+}
+footer .ryokan-box .picture img {
+	height: 100%;
+}
+footer .ryokan-box .ryokan-info {
+
+}
+footer ul {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-rows: repeat(6, auto);
+	line-height: 2;
+}
+footer ul li {
+	padding-right: 16px;
+}
+footer ul li a {
+	color: #fff;
+}
+
+/*page-top*/
+.page-top {
+    width: 88px;
+    padding: 0 8px;
+    aspect-ratio: 3 / 4;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+	z-index: 999;
+//    background: #fcf;
+    filter: drop-shadow(0px 0px 4px  rgba(0, 0, 0, 0.4)); 
+}
+.page-top .icon {
+    width: 100%;
+    margin: 0 auto 8px;
+    aspect-ratio: 1 / 1;
+    display: block;
+//    filter: drop-shadow(0px 0px 4px  rgba(0, 0, 0, 0.4)); 
+}
+.page-top p {
+    margin: 0 auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #D57686;
+    display: block;
+//    text-shadow: 0px 0px 4px  rgba(0, 0, 0, 0.4);
+}
+
+.page-top:hover {
+//    filter: drop-shadow(0px 0px 6px  rgba(255, 255, 255, 0.7)); 
+    filter: drop-shadow(0px 0px 8px  rgba(147, 112, 219, 0.8)); 
+}
+
+.main-visual {
+	padding-top: 100px;
+}
+
+/*=====imamura-link==========*/
+.imamura-link {
+    max-width: 100%;
+    max-height: 80vh;
+    margin: 0 auto; /* 中央配置 */
+    padding: 0 12px; /*前のセクションとの間隔は各自で調整してください*/
+    box-sizing: border-box;
+//    background: #f0f;
+    overflow: visible;
+}
+.link_section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between; /* 均等配置 */
+	box-sizing: border-box;
+}
+.link_section li {
+    margin-left: 20px;
+    width: calc(100% / 3);
+//    aspect-ratio: 9 / 16;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+	overflow: hidden;
+	box-sizing: border-box;
+//    background: #ff0;
+}
+.link_section li a {
+    width: 100%;
+	padding: 78% 10%;
+    font-size: 2.5rem;
+    display: block;
+    color: #fff;
+    text-shadow: 1px 1px 3px  rgba(0, 0, 0, 0.6);
+}
+
+/*各要素の設定*/
+.link_section li:nth-child(1) {
+    margin-left: 0;
+    background: url(../images/roten_daiyokujo3_2.png);
+    background-size: cover;
+//    background-size: 120%;
+    background-position: center;
+}
+.link_section li:nth-child(2) {
+    background: url(../images/room2_1.png);
+    background-size: cover;
+//    background-size: 120%;
+    background-position: center;
+}
+.link_section li:nth-child(3) {
+    background: url(../images/wasyoku01_m.jpg);
+    background-size: cover;
+//    background-size: 120%;
+    background-position: center;
+}
+
+
+
+@media screen and (max-width: 780px) {
+	.navWrap {
+		width: 70%;
+	}
+	.yoyaku { 
+		width: 80px;
+	}
+	.contact {
+		display: none;
+	}
+
+	footer {
+		padding: 64px 16px;
+		height: auto; 
+	}
+	.footer-box {
+		width: 98%;
+		flex-direction: column;
+	}
+	footer .ryokan-box{
+		margin: 0 auto 64px;
+		width: 100%;	
+	}
+	.link_section li a {
+		font-size: 1.8rem;
+	}
+}
+
+@media screen and (max-width: 430px) {
+    .imamura-link {
+        max-height: 100%;
+        overflow: visible;
+    }    
+    .link_section {
+        height: 100%;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    .link_section li {
+        margin: 0 auto 16px;
+        width: 98%;
+        height: calc(100%/4);
+        aspect-ratio: auto;
+    }
+	.link_section li a {
+		font-size: 1.8rem;
+		padding: 10% 0;
+	}
+}

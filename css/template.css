@@ -1,0 +1,232 @@
+@charset "utf-8";
+
+/*=========================================
+
+ヘッダーなどの共通するパーツの設定はbase.css、
+
+テキストのスタイルやサイズの初期設定はreset.cssで設定してあります。
+
+===========================================*/
+
+
+/*main-visual*/
+.main-visual {
+    margin: 0 auto 32px;
+    padding-top: 100px;
+    width: 100%;
+    height: 100vh;
+    background: url(../main-visual-sample.png);
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    text-shadow: 1px 1px 3px  rgba(0, 0, 0, 0.6);
+}
+.main-visual h1 {
+    margin: 0 auto;
+    font-size: 4.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+
+/*slide-sample-1*/
+.slide-sample-1 {
+    margin: 0 auto 32px;
+    width: 100%;
+    height: 100vh;
+//    background: url(../main-visual-sample.png); /*ここはコピーしない！*/
+//    background-size: cover; /*ここはコピーしない！*/
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+//    background: #fcf; /*目印です*/
+}
+.slide-sample-1 h1 {
+    margin: auto;
+    font-size: 4.5rem;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 3px  rgba(0, 0, 0, 0.6);
+    position: absolute;
+//    top: 0;
+//    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+.slide-sample-1 .slide {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0; 
+    z-index: 1;
+}
+
+.slide-sample-1 .slide .bxslider {
+	width: 100%;
+	height: 100%;		
+} 
+
+
+/*slide-sample-2*/
+#container_template .slide-sample-2 {
+    margin: 0 auto 32px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+//    background: #fcf; /*目印です*/
+}
+.slide-sample-2 .slide {
+//    margin: 0 auto;
+    width: 50%;
+//    min-height: 50%;
+    aspect-ratio: 4 / 3;
+}
+.slide-sample-2 .slide .bxslider {
+	width: 100%;
+	height: 100%;
+}
+
+.slide-sample-2 .text-box {
+    color: #000;
+    background: rgb(255, 255, 0); /* 目印の為に入れています */
+    width: 45%;
+    padding: 16px 8px;
+    box-sizing: border-box;
+}
+
+
+/*テンプレート  ※以下は参考例なので、各自のページを作る際には消してOKです*/
+
+
+#container_template section {
+    margin: 0 auto 32px;
+    height: 100vh;
+    width: 100%;
+//    border: solid 1px #000;
+    overflow: hidden;
+//    background: #516934; /* 目印の為に入れています */
+}
+#container_template .picture {
+    overflow: hidden;
+}
+
+
+/*sample-1*/
+#container_template .sample-1 {
+    position: relative;
+//    background: #ccc;
+}
+#container_template .sample-1 .picture {
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+#container_template .sample-1 div {
+    width: 60%;
+    color: #fff;
+    background:  rgba(255, 255, 0, 0.4); /* 重なりを見せるために入れています */
+    position: absolute;
+    bottom: 80px;
+    right: 0px;
+
+}
+#container_template .sample-1 h2 {
+    font-size: 4.5rem; 
+}
+
+/*sample-2*/
+#container_template .sample-2 {
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+#container_template .sample-2 div {
+    color: #000;
+    background: rgb(255, 255, 0); /* 目印の為に入れています */
+    width: 45%;
+    padding: 16px 8px;
+    box-sizing: border-box;
+}
+#container_template .sample-2 div h2 {
+    margin-bottom: 24px;
+    font-size: 3rem;
+}
+
+#container_template .sample-2 .picture {
+    width: 50%;
+    overflow: hidden;
+}
+#container_template .sample-2 .picture img {
+    min-height: 100%;
+    width: 100%;
+}
+
+
+/*sample-3*/
+#container_template .sample-3 {
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+#container_template .sample-3 div {
+    padding: 16px 8px;
+    color: #000;
+    background:  rgb(255, 255, 0); /* 目印の為に入れています */
+    width: 45%;
+}
+#container_template .sample-3 div h2 {
+    margin-bottom: 24px;
+    font-size: 3rem;
+}
+
+#container_template .sample-3 .picture {
+    width: 50%;
+    overflow: hidden;
+}
+#container_template .sample-3 .picture img {
+    min-height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 780px) {
+    #container_template .sample-2,
+    #container_template .sample-3 {
+        margin: 0 auto;
+        width: 98%;
+        flex-direction: column;
+    }
+    #container_template .sample-2 div,
+    #container_template .sample-3 div {
+        margin: 0 auto;
+        width: 98%;
+    }
+    #container_template .sample-2 .picture,
+    #container_template .sample-3 .picture {
+        width: 100%;
+    }
+}

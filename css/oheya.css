@@ -1,0 +1,388 @@
+@charset "utf-8";
+
+body{
+	font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic", "メイリオ", Meiryo, sans-serif;
+	color: #666;
+}
+
+/*=========================================
+
+ヘッダーなどの共通するパーツの設定はbase.css、
+
+テキストのスタイルやサイズの初期設定はreset.cssで設定してあります。
+
+===========================================*/
+
+img, video {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+#container_oheya {
+    width: 95%;
+    margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*main-visual*/
+.main-visual {
+    margin: 0 auto 32px;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/main.JPG);
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.main-visual h1 {
+    margin: 0 auto;
+    font-size: 4.5rem;
+    color: #fff;
+    text-align: center;
+}
+#container {
+	padding: 20px 0;
+}
+.title_box {
+    padding: 100px;
+    width:70%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.title_box p {
+    margin-top: 50px;
+    line-height: 2;
+    letter-spacing: 1.4px;
+}
+.catch {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+}
+.wap {
+	width:100%;
+	margin: 100px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.wap p {
+	margin: 20px;
+	font-size: 1.4rem;
+}
+.roten {
+    width: 100%;
+}
+.roten:nth-of-type(1) {
+    background:beige ;
+}
+.roten:nth-of-type(3) {
+    background: beige;
+}
+.room_text {
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    //background: lavender;
+}
+.text_box {
+	width:40%;
+	margin: 0 auto;
+	text-align: center;
+}
+.text_box span{
+    font-size: 2rem;
+}
+.text_box p{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 2;
+    letter-spacing: 1.4px;
+}
+table {
+    width: 70%;
+    margin: 100px auto;
+    //border: 0.5px solid #333;
+    border-radius: 8px;
+}
+th, td {
+    box-shadow: inset 0 -0.5px 0 #706c6c; 
+    padding: 20px;
+    text-align: left;
+    line-height: 2;
+    letter-spacing: 1.4px;
+  }
+th {
+    background:darkolivegreen;
+    box-shadow: inset 0 -0.5px 0 lightgrey;
+    width: 20%;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+.imamura-link {
+    height: 80vh;
+}
+.title-icon{
+  height: auto;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+.title-icon p {
+    height: 40px;
+    text-align: center;
+}
+.title-icon p img {
+    width: 40px;
+}
+.btn_box {
+  text-align: center;
+}
+
+
+/* メニュー全体のスタイル */
+.global-nav {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    line-height: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    //background: olive;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 各メニューのスタイル */
+.global-nav p {
+    width: 100%;
+    width: 25%;
+	text-align: center;
+   // background: olivedrab;
+}
+.global-nav p a {
+    display: block;
+    color: #333;
+	text-decoration: none;
+}
+
+/* 黒いバーのスタイル */
+.global-nav--bar {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 0.5px;
+    background: darkred;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+/* ホバーでバーの位置を変化 */
+.global-nav p:nth-child(1):hover ~ .global-nav--bar {
+    left: 0%;
+}
+.global-nav p:nth-child(2):hover ~ .global-nav--bar {
+    left: 35%;
+}
+.global-nav p:nth-child(3):hover ~ .global-nav--bar {
+    left: 70%;
+}
+.bg-slider, .bg-slider_2, .bg-slider_3  {
+	width: 50%;
+	height: 100vh;
+	background-position:left center;
+	background-size: auto;
+    background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    position: relative; 
+    z-index: 1;
+}
+.bg-slider__title{
+	color: #fff;
+	font-size: 48px;
+	line-height: 1.5;
+	text-align:center;
+	text-shadow: 1px 1px 1px #000;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 1024px) {
+.main-visual {
+     height: 55vh;
+}
+.wap p {
+	font-size: 1.2rem;
+}
+.room_text {
+    display: flex;
+    flex-direction: row; /* ← 横並びに戻す */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* 小さい端末では折り返し */
+  }
+
+  .bg-slider, .bg-slider_2, .bg-slider_3 {
+    margin-top: 50px;
+    width: 48%;  /* 画像側の幅 */
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background-size: cover;
+    background-position: center;
+  }
+  .text_box {
+    width: 48%;  /* テキスト側の幅 */
+    margin: 20px auto;
+  }
+ .text_box p {
+    font-size: 1rem;
+ }
+ table {
+    width: 70%;
+    height: auto;
+ }
+}
+@media screen and (max-width: 768px) {
+  .main-visual {
+        height: 50vh;
+    }
+.global-nav--bar{
+    display: none;
+}
+.global-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+    line-height: 0.8;
+}
+  .global-nav a {
+    white-space: nowrap; /* 改行禁止 */
+}
+ .bg-slider, .bg-slider_2, .bg-slider_3 {
+    width: 100%; 
+    height: auto;
+}
+.text_box {
+    width: 100%;
+}
+.text_box span {
+    font-size: 1.4rem;
+}
+.text_box p {
+    font-size: 1rem;
+ }
+ .catch {
+    font-size: 1.2rem;
+ }
+ table {
+    width: 90%;
+    height: auto;
+ }
+th, td {
+    font-size: 0.8rem;
+}
+}
+@media screen and (max-width: 480px) {
+  .main-visual {
+        height: 40vh;
+    }
+    .main-visual h1 {
+        font-size: 2.3rem;
+    }
+ body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .title_box {
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .wap {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .global-nav {
+    margin: 20px auto;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .global-nav p {
+    font-size: 1rem;
+    width: auto;
+    margin: 10px 0;
+  }
+
+  .global-nav a {
+    display: inline-block;
+  }
+
+  .room_text {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .text_box {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .text_box span {
+    font-size: 1.2rem;
+  }
+
+  .text_box p {
+    font-size: 0.8rem;
+  }
+  table {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  th, td {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+    line-height: 1.4;
+  }
+}
+
+@media screen and (max-width: 780px) {
+    #container_template .sample-2,
+    #container_template .sample-3 {
+        margin: 0 auto;
+        width: 98%;
+        flex-direction: column;
+    }
+    #container_template .sample-2 div,
+    #container_template .sample-3 div {
+        margin: 0 auto;
+        width: 98%;
+    }
+    #container_template .sample-2 .picture,
+    #container_template .sample-3 .picture {
+        width: 100%;
+    }
+}

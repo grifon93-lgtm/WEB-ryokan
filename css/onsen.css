@@ -1,0 +1,454 @@
+@charset "utf-8";
+
+/*=========================================
+
+ヘッダーなどの共通するパーツの設定はbase.css、
+
+テキストのスタイルやサイズの初期設定はreset.cssで設定してあります。
+
+===========================================*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*main-visual*/
+.main-visual {
+    margin: 0 auto 32px;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/onsen_top2.png);
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.main-visual h1 {
+    margin: 0 auto;
+    font-family: serif;
+    font-size: 4.5rem;
+    color: #fff;
+    text-align: center;
+}
+/*main*/
+#container onsen {
+    width: 90%;
+}
+.kugiri {
+    margin: 70px auto 100px; 
+    width: 40px;
+    height: auto;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    opacity: 0.9;
+
+}
+//.menu {
+    margin: 40px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(213, 118, 134);
+}
+//.menu li a{
+    margin: 40px 20px;
+//    border-left: 1px solid;
+    box-sizing: border-box;
+    text-align: center;
+    color:rgb(213, 118, 134)
+}
+//.menu li a :hover{
+    color: pink;
+}
+//li:first-child {
+    border:none;
+}
+/* メニュー全体のスタイル */
+
+/*.global-nav {
+    position: relative;
+    width: 50%;
+    height: 60px;
+    line-height: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    //background: olive;
+    display: flex;
+    justify-content: space-between;
+    
+
+/* 各メニューのスタイル */
+/*.global-nav p {
+    width: 80%;
+ //   width: 25%;
+	text-align: center;
+   // background: olivedrab;
+}
+.global-nav p a {
+    display: block;
+    color: #333;
+	text-decoration: none;
+}*/
+
+/* 黒いバーのスタイル */
+/*.global-nav--bar {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 0.5px;
+    background: darkred;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}*/
+.wap {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.global-nav {
+    position: relative;
+    width: 40%;
+    height: auto;
+ //   line-height: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    flex-direction: row;
+}*/
+
+
+.global-nav p {
+    width: 80%;
+    text-align: center;
+}
+
+.global-nav p a {
+    display: block;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+}
+
+.global-nav--bar {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    height: 0.5px;
+    background: darkred;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+
+/* ホバーでバーの位置を変化 */
+.global-nav p:nth-child(1):hover ~ .global-nav--bar {
+    left: -8%;
+}
+.global-nav p:nth-child(2):hover ~ .global-nav--bar {
+    left: 30%;
+}
+.global-nav p:nth-child(3):hover ~ .global-nav--bar {
+    left: 75%;
+}
+
+
+.gaiyo {
+    margin: 40px auto;
+    width: 60%;
+    font-family: serif;
+    font-size: 1.1rem;
+    color: #666;
+    display: block;
+    text-align: center;
+    line-height: 2;
+
+}
+
+section {
+    margin: 30px auto;
+    width: 90%;
+}
+section h2, .shosai_box h2{
+    margin: 40px auto;
+    text-align: center;
+    font-family: serif;
+    font-size: 1.6rem;
+    color: #666;
+}
+section .bun {
+    margin: 10px;
+    width: 20%;
+    font-family: serif;
+    font-size: 1.0rem;
+    color: #666;
+    line-height: 2.0;
+    vertical-align: middle;
+}
+section .picture {
+    width: 70%;
+    margin: 10px;
+}
+//.migi{
+    order: 10;
+}
+//hidari {
+    order: 1;
+}
+.onsen_box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  gap: 20px; /* 間隔を少し */
+}
+/*概要*/
+.shosai_box {
+    margin-top: 100px;
+}
+table {
+    width: 70%;
+    margin: 100px auto;
+    border-radius: 8px;
+}
+th, td {
+    padding: 20px;
+    font-family: serif;
+    line-height: 2.0;
+    box-shadow: inset 0 -0.5px 0 #706c6c;
+ //   border-bottom: 1px solid #666; 
+}
+th {
+    width: 20%;
+    background: #516934;
+    box-shadow: inset 0 -0.5px 0 lightgrey;
+    color: #fff;
+    vertical-align: middle;
+}
+td {
+    padding-left: 20px;
+    color: #666;
+}
+.bg-slider {
+	width: 70%;
+	height: 500px;
+	background-position:center center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.bg-slider__title{
+	color: #fff;
+	font-size: 48px;
+	line-height: 1.5;
+	text-align:center;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.imamura-link {
+    height: 80vh;
+}
+.link_section li:nth-child(1) {
+    background-position: 30%;
+}
+.btn_box p {
+    display: block;
+    text-align: center;
+}
+
+
+/*テンプレート  ※以下は参考例なので、各自のページを作る際には消してOKです*/
+
+/*
+#container_onsen section {
+    margin: 0 auto 32px;
+    height: 100vh;
+    width: 100%;
+//    border: solid 1px #000;
+    overflow: hidden;
+//    background: #516934; /* 目印の為に入れています */
+/*}
+
+#container_onsen .picture {
+    overflow: hidden;
+}
+
+
+/*sample-1*/
+/*
+#container_onsen .daiyokujo {
+    position: relative;
+//    background: #ccc;
+}
+#container_onsen .daiyokujo .picture {
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+#container_onsen .daiyokujo div {
+    width: 60%;
+    color: #fff;
+    background:  rgba(255, 255, 0, 0.4); /* 重なりを見せるために入れています */
+    /*
+    position: absolute;
+    bottom: 80px;
+    right: 0px;
+
+}
+#container_onsen .daiyokujo h2 {
+    font-size: 4.5rem; 
+}
+*/
+/*sample-2*/
+/*
+#container_onsen .kasikiri {
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+#container_onsen .kasikiri div {
+    color: #000;
+    background: rgb(255, 255, 0); /* 目印の為に入れています */
+/*    width: 45%;
+    padding: 16px 8px;
+    box-sizing: border-box;
+}
+#container_onsen .kasikiri div h2 {
+    margin-bottom: 24px;
+    font-size: 3rem;
+}
+
+#container_onsen .kasikiri .picture {
+    width: 50%;
+    overflow: hidden;
+}
+#container_onsen .kasikiri .picture img {
+    min-height: 100%;
+    width: 100%;
+}*/
+
+
+/*sample-3*/
+/*
+#container_onsen .sample-3 {
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+#container_onsen .sample-3 div {
+    padding: 16px 8px;
+    color: #000;
+    background:  rgb(255, 255, 0); /* 目印の為に入れています */
+    /*
+    width: 45%;
+}
+#container_onsen .sample-3 div h2 {
+    margin-bottom: 24px;
+    font-size: 3rem;
+}
+
+#container_onsen .sample-3 .picture {
+    width: 50%;
+    overflow: hidden;
+}
+#container_onsen .sample-3 .picture img {
+    min-height: 100%;
+    width: 100%;
+}
+*/
+/*
+@media screen and (max-width: 780px) {
+    #container_onsen .sample-2,
+    #container_onsen .sample-3 {
+        margin: 0 auto;
+        width: 98%;
+        flex-direction: column;
+    }
+    #container_onsen .sample-2 div,
+    #container_onsen .sample-3 div {
+        margin: 0 auto;
+        width: 98%;
+    }
+    #container_onsen .sample-2 .picture,
+    #container_onsen .sample-3 .picture {
+        width: 100%;
+    }*/
+
+@media screen and (max-width:1024px){
+    .main-visual {
+        height: 55vh;
+    }
+    .global-nav {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:970px){
+//    .main-visual {
+        height: 40vh;
+    }
+//    .global-nav {
+        width: 50%;
+    }
+}
+/*タブレット用*/
+@media screen and (max-width: 768px) {
+    .main-visual {
+        height: 50vh;
+    }
+    .gaiyo {
+        width: 90%;
+    }
+    .global-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+  .global-nav--bar {
+        display: none; 
+  }
+
+    .onsen_box {
+        flex-direction: column;
+  }
+    .onsen_box.reverse {
+        flex-direction: column-reverse; 
+  }
+  .bg-slider,
+  .onsen_box .bun {
+        width: 100%;
+        margin: 10px auto;
+  }
+  table {
+        width: 90%;
+        margin: 10px auto;
+}
+}
+/*スマホ用*/
+
+@media screen and (max-width:480px){
+    .main-visual {
+        height: 40vh;
+    }
+    .main-visual h1 {
+        font-size: 2.3rem;
+    }
+}

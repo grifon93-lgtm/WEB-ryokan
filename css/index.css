@@ -1,0 +1,578 @@
+@charset "utf-8";
+
+/*=========================================
+
+ヘッダーなどの共通するパーツの設定はbase.css、
+
+テキストのスタイルやサイズの初期設定はreset.cssで設定してあります。
+
+===========================================*/
+
+
+/*main-visual*/
+.main-visual {
+    padding-top: 80px;
+    margin: 0 auto 64px;
+    width: 100%;
+    height: 100vh;
+//    background: url(../main-visual-sample.png);
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+.main-visual h1 {
+    margin: 0 auto;
+    font-size: 7rem;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 2px  rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.main-visual .slide {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0; 
+    z-index: 1;
+}
+
+.slide .bxslider {
+	width: 100%;
+	height: 100%;		
+} 
+
+.slide {
+    width: 92%;
+    aspect-ratio: 4 / 3;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.bx-pager {
+    display: none;
+}
+
+.text-box {
+    width: 65%;
+    padding: 0 20px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    color: #fff;
+    box-sizing: border-box;
+}
+.text-box h2 {
+    margin-bottom: 54px;
+    font-size: 6rem;
+    text-shadow: 1px 1px 8px  rgba(0, 0, 0, 0.4);
+    line-height: 1.2;
+}
+.text-box p {
+    font-size: 1.4rem;
+    margin-bottom: 32px;
+    text-shadow: 1px 1px 6px  rgba(0, 0, 0, 0.8);
+    line-height: 1.2;
+}
+
+
+#container_index {
+    margin-bottom: 64px;
+}
+
+.botan {
+    max-width: fit-content;
+    border: solid #fff 1px;
+    border-radius: 25px;
+    box-sizing: border-box;
+//    background: rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 1px 6px  rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+.botan:hover {
+    background: rgba(255, 255, 255, 1);
+    border-radius: 25px;
+    border: solid #fff 1px;
+    box-shadow: 1px 1px 8px  rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+.botan a {
+    display: block;
+    padding: 16px;
+    color: #fff;
+    font-weight: 500;
+    text-shadow: 1px 1px 8px  rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+.botan a:hover {
+    color: #516934;
+    text-shadow: none;
+    transition: 0.3s;
+}
+
+
+/*index*/
+.container_index_Bg {
+    margin: auto;
+    padding:;
+    width: 94%;
+    height: 100%;
+    background: rgba(179, 136, 136, 0.2); 
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+/*concept*/
+.concept {
+    margin: 0 auto 64px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;  
+//    display: flex;
+//    flex-wrap: wrap;
+    position: relative;
+}
+
+.concept .slide {
+    margin: 0 auto 32px 0;
+//    background: #fcf; /*目印です*/
+}
+
+.concept .text-box {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    z-index: 1;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+
+.concept div h2 {
+    text-align: right;
+}
+.concept div p {
+    margin-left: auto;
+    margin-right: 30px;
+}
+.concept div .botan {
+    margin-left: auto;
+}
+
+/*onsen*/
+.onsen {
+    margin: 0 auto 32px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+//    display: flex;
+//    flex-wrap: wrap;
+//    flex-direction: row-revease;
+    position: relative;
+}
+
+.onsen .text-box {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    z-index: 1;
+}
+
+.onsen .slide {
+    margin: 0 0 32px auto;
+//    background: #fcf; /*目印です*/
+}
+
+.onsen div h2 {
+
+}
+.onsen div p {
+
+}
+
+
+/*oheya*/
+.oheya {
+    margin: 0 auto 32px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.oheya .slide {
+    margin: 0 auto 32px 0;
+//    background: #fcf; /*目印です*/
+}
+
+
+.oheya .text-box {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    z-index: 1;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+.oheya div h2 {
+
+    text-align: right;
+}
+.oheya div p {
+    font-size: 1.5rem;
+    margin-bottom: 32px;
+    text-shadow: 1px 1px 6px  rgba(0, 0, 0, 0.8);
+}
+.oheya .botan{
+    margin-left: auto;
+}
+
+/*shokuji*/
+.shokuji {
+    margin: 0 auto 32px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+//    display: flex;
+//    flex-wrap: wrap;
+    position: relative;
+}
+
+.shokuji .slide {
+    margin: 0 0 32px auto;
+//    background: #fcf; /*目印です*/
+}
+
+.shokuji .text-box {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    z-index: 1;
+}
+.shokuji div h2 {
+
+}
+.shokuji div p {
+
+}
+.shokuji div .botan {
+//    margin-left: auto;
+}
+
+/*section-box*/
+.section-box {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.section-box section {
+    width: 49%;
+    height: 100%;
+}
+.section-box section .label {
+    width: 100%;
+    height: fit-content;
+    padding: 32px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    box-sizing: border-box;
+    transform: translateY(0);
+    transition: 0.2s ease-in-out;
+}
+.label h2 {
+    width: 100%;
+}
+.label p {
+    width: 100%;
+}
+.section-box section .picture {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+.section-box section .picture img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.label .hidden {
+    transform: translateY(100%);
+    transition: 0.2s ease-in-out;
+}
+
+/*access*/
+.section-box .access{
+    overflow: hidden;
+    position: relative;
+}
+.access div {
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
+.access div h2 {
+    margin-bottom: 16px;
+    font-size: 2rem;
+}
+.access div p {
+    font-size: 1.5rem;
+}
+.access .picture {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+} 
+
+
+/*toiawase*/
+.section-box .toiawase {
+    overflow: hidden;
+    position: relative;
+}
+.toiawase div {
+    padding: 16px;
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
+.toiawase div h2 {
+    margin-bottom: 16px;
+    font-size: 2rem;
+}
+.toiawase div p {
+    font-size: 1.5rem;
+}
+.section-box .toiawase div .mobile{
+    display: none;
+}
+.toiawase .picture {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+} 
+
+
+/*news*/
+.news {
+    display: none;
+    margin: 0 auto;
+}
+
+
+
+@media screen and (max-width: 430px) {
+    .main-visual h1 {
+        font-size: 5rem;
+    }
+
+    .text-box {
+        padding-bottom: 0;
+    }
+
+/*concept*/
+    #container_index section div {
+        padding-bottom: 16px;
+    }
+
+    #container_index .bx-pager {
+        display: none;
+    }
+
+    .container_index_Bg {
+        display: none;
+    }
+
+    .concept .slide {
+        margin: 0 auto 32px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    //    background: #fcf; /*目印です*/
+    }
+
+    .concept .text-box {
+        margin: 0 auto;
+        height: auto;
+        width: 96%;
+        box-sizing: border-box;
+        top: auto;
+        bottom: 0px;
+        right: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .concept div h2 {
+        width:90%;
+        word-break: all;
+        margin-bottom: 32px;
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    .concept div p {
+        font-size: 1.2rem;
+        margin-bottom: 24px;
+    }
+    .concept div .botan {
+        margin: 0 auto;
+    }
+    .concept .picture {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    .concept .picture img {
+        max-width: auto;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+/*onsen*/
+    .onsen .slide {
+        margin: 0 auto 32px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    //    background: #fcf; /*目印です*/
+    }
+
+    .onsen .text-box {
+        margin: 0 auto;
+        height: auto;
+        width: 96%;
+        box-sizing: border-box;
+        top: auto;
+        bottom: 0px;
+        right: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .onsen div h2 {
+        margin-bottom: 32px;
+        font-size: 2.5rem;
+    }
+    .onsen div p {
+        font-size: 1.2rem;
+        margin-bottom: 24px;
+    }
+    .onsen div .botan {
+        margin: 0 auto;
+    }
+
+
+/*oheya*/
+    .oheya .slide {
+        margin: 0 auto 32px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    //    background: #fcf; /*目印です*/
+    }
+
+    .oheya .text-box {
+        margin: 0 auto;
+        height: auto;
+        width: 96%;
+        box-sizing: border-box;
+        top: auto;
+        bottom: 0px;
+        right: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .oheya div h2 {
+        margin-bottom: 32px;
+        font-size: 2.5rem;
+    }
+    .oheya div p {
+        font-size: 1.2rem;
+        margin-bottom: 24px;
+    }
+    .oheya div .botan {
+        margin: 0 auto;
+    }
+
+
+/*shokuji*/
+    .shokuji .slide {
+        margin: 0 auto 32px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    //    background: #fcf; /*目印です*/
+    }
+
+    .shokuji .text-box {
+        margin: 0 auto;
+        height: auto;
+        width: 96%;
+        box-sizing: border-box;
+        top: auto;
+        bottom: 0px;
+        right: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .shokuji div h2 {
+        margin-bottom: 32px;
+        font-size: 2.5rem;
+    }
+    .shokuji div p {
+        font-size: 1.2rem;
+        margin-bottom: 24px;
+    }
+    .shokuji div .botan {
+        margin: 0 auto;
+    }
+
+
+/*section-box*/
+    .section-box {
+        height: 100vh;
+//        flex-direction: column;
+//        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+    .section-box section {
+        width: 100%;
+        height: 45%;
+        margin-bottom: 16px;
+    }
+    .section-box .label {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    }
+    .section-box section div h2 {
+        font-size: 2rem;
+        color: #fff;
+    }
+    .section-box section div p {
+        font-size: 1.2rem;       
+        color: #fff;
+    }
+    .section-box .label a {
+        color: #fff;
+    }
+    .section-box .toiawase div .mobile{
+        display: block;
+    }
+}

@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/*=========================================
+
+ヘッダーなどの共通するパーツの設定はbase.css、
+
+テキストのスタイルやサイズの初期設定はreset.cssで設定してあります。
+
+===========================================*/
+
+
+/*main-visual*/
+.main-visual {
+    margin: 0 auto 32px;
+    width: 100%;
+    height: 100vh;
+    background: url(../main-visual-sample.png);
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    text-shadow: 1px 1px 3px  rgba(0, 0, 0, 0.6);
+}
+.main-visual h1 {
+    margin: 0 auto;
+    font-size: 4.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+/*テンプレート  ※以下は参考例なので、各自のページを作る際には消してOKです*/
+
+/*company-about*/
+.company-about {
+    width: 90%;
+    margin: 0 auto 64px;
+    text-align: center;
+}
+
+
+/*table*/
+table {
+    width: 70%;
+    margin: 0 auto 24px;
+}
+table tbody {
+//    border: solid #ccc 1px;
+}
+table tbody tr {
+    padding: 8px;
+    margin-right: auto;
+    line-height: 2;
+    height: 4rem;
+//    box-sizing: border-box;
+}
+table tbody tr th {
+    width: 30%;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    vertical-align: middle;
+    background:darkolivegreen;
+    border-bottom: solid lightgrey 1px;
+//    background: #0ff;
+}
+table tbody tr td {
+    padding: 20px;
+    width: 68%;
+    text-align: left;
+    border-bottom: solid lightgrey 1px;
+    box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 780px) {
+    table {
+        width: 88%;
+    }
+    table tbody tr{
+        width: 98%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+//        flex-direction: column;
+    }
+    table tbody tr th {
+        width: 98%;
+    }
+    table tbody tr td {
+        width: 98%;
+    }
+}
